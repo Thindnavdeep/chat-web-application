@@ -8,8 +8,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 
-
-
 const server = app.listen(PORT, () => {
     console.log(`server running on port`)
 })
@@ -42,7 +40,7 @@ function onconnected(socket) {
     })
 }
 app.get('/', (req, res) => {
-    res.send('index')
+    res.render('index')
 })
 
 
