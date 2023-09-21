@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="chat.png" >
+</head>
+
+<body>
+    <br>
+    <h1>iChat 🌟</h1>
+    <br>
+    <div class="card">
+        <div class="content">
+            <div class="header" id="header">
+                <div class="name">
+                    <input type="text" id="input-name" class="input-name" value="Anonymous">
+                </div>
+                <div class="status">
+                    status
+                </div>
+                <div class="typing" id="typing">
+                    
+                </div>
+            </div>
+            <ul class="meggage-container" id="message-container">
+
+
+                <!-- <li class="message-left">
+                    <p class="message">
+                        left message
+                    </p>
+                    <span> sent time</span>
+                </li>
+
+
+                <li class="message-right">
+                    <p class="message">
+                        right message
+                    </p>
+                    <span> sent time</span>
+                </li> -->
+
+            </ul>
+            <form class="message-form" id="message-form">
+                <input type="text" name="message" id="message-input" class="message" autocomplete="off">
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    <h3 class="clients-total" id="clients-total">Total clients:2</h3>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
