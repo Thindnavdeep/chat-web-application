@@ -9,9 +9,17 @@ app.set('view engine', 'ejs');
 
 
 
+<<<<<<< HEAD
 
 const server = app.listen(PORT, () => {
     console.log(`server running on port`)
+=======
+app.get('/', (req, res) => {
+    res.render('index')
+})
+const server = app.listen(PORT, () => {
+    console.log(`🏐 server running on port http://localhost:${PORT}/`)
+>>>>>>> 43250b0fc0732deb36ded65b45b2d979b160ee46
 })
 
 const io = require('socket.io')(server)
@@ -41,8 +49,12 @@ function onconnected(socket) {
         socket.broadcast.emit('feedback',data);
     })
 }
-app.get('/', (req, res) => {
-    res.render('index')
-})
 
+<<<<<<< HEAD
+=======
+
+// const server = app.listen(PORT, () => {
+//     console.log(`🏐 server running on port http://localhost:${PORT}/`)
+// })
+>>>>>>> 43250b0fc0732deb36ded65b45b2d979b160ee46
 
