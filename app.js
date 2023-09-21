@@ -9,7 +9,9 @@ app.set('view engine', 'ejs');
 
 
 
-
+app.get('/', (req, res) => {
+    res.render('index')
+})
 const server = app.listen(PORT, () => {
     console.log(`🏐 server running on port http://localhost:${PORT}/`)
 })
@@ -41,9 +43,7 @@ function onconnected(socket) {
         socket.broadcast.emit('feedback',data);
     })
 }
-app.get('/', (req, res) => {
-    res.render('index')
-})
+
 
 // const server = app.listen(PORT, () => {
 //     console.log(`🏐 server running on port http://localhost:${PORT}/`)
