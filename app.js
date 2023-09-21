@@ -10,9 +10,9 @@ app.set('view engine', 'ejs');
 
 
 
-const server = app.listen(PORT, () => {
-    console.log(`🏐 server running on port http://localhost:${PORT}/`)
-})
+// const server = app.listen(PORT, () => {
+//     console.log(`🏐 server running on port http://localhost:${PORT}/`)
+// })
 
 const io = require('socket.io')(server)
 
@@ -45,5 +45,7 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-
+const server = app.listen(PORT, () => {
+    console.log(`🏐 server running on port http://localhost:${PORT}/`)
+})
 
