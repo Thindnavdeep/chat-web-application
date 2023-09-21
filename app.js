@@ -42,7 +42,7 @@ function onconnected(socket) {
     })
 }
 app.get('/', (req, res) => {
-    res.render('index')
+    res.send('index')
 })
 
 
