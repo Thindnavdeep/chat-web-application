@@ -45,8 +45,5 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.listen(PORT, () => {
-    console.log(`🏐 server running on port http://localhost:${PORT}/`)
-})
 
 
