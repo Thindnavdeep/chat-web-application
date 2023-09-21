@@ -7,7 +7,6 @@ PORT =  4000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-
 const server = app.listen(PORT, () => {
     console.log(`server running on port`)
 })
@@ -39,6 +38,12 @@ function onconnected(socket) {
         socket.broadcast.emit('feedback',data);
     })
 }
+app.use((err,req,res,text)=>{
+    console.log(err.stack);
+    res.type('text/plain')
+    res.status(500);
+    res.send('internal server err 500');
+})
 app.get('/', (req, res) => {
     res.render('index')
 })
