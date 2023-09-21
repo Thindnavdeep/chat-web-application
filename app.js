@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const { Socket } = require("socket.io");
-PORT = process.env.PORT || 4000;
+PORT =  4000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
