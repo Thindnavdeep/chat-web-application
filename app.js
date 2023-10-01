@@ -45,7 +45,7 @@ app.use((err,req,res,text)=>{
     res.send('internal server err 500');
 })
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('dummy')
 })
 
 
