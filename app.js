@@ -5,10 +5,11 @@ const { Socket } = require("socket.io");
 PORT =  4000;
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.set("views", __dirname + "/views");
 app.set('view engine', 'ejs');
 
 const server = app.listen(PORT, () => {
-    console.log(`server running on port`)
+    console.log(`server running on port ${PORT}`)
 })
 
 const io = require('socket.io')(server)
