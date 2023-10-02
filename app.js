@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
 const path = require('path');
+const cors = require("cors");
 const { Socket } = require("socket.io");
 PORT =  4000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("views", __dirname + "/views");
 app.set('view engine', 'ejs');
+app.use(cors())
 
 const server = app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`)
