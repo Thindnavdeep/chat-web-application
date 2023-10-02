@@ -1,4 +1,6 @@
-const socket = io("https://chat-web-application-two.vercel.app", {})
+// const socket = io("http://localhost:4000/", {})
+const socket = io();
+
 const clientTotal = document.getElementById('clients-total');
 
 const messagecontainer = document.getElementById("message-container");
