@@ -1,5 +1,5 @@
-const socket = io("https://chat-web-application-two.vercel.app/", {})
-// const socket = io();
+// const socket = io("https://chat-web-application-two.vercel.app/", {})
+const socket = io();
 
 const clientTotal = document.getElementById('clients-total');
 
